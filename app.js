@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use(cors());
 
-db();
+// db();
 
 const apiRouter = express.Router();
 app.use('/api/v1', apiRouter);
