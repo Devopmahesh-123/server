@@ -1,21 +1,16 @@
 import express from 'express';
-import config from 'config';
-import db from './db/dataBaseConfig.js';
 import router from './router/router.js';
 import bodyParser from 'body-parser';
 import cors from 'cors';
 
 const app = express();
-
-const { API_PORT } = config.get("PORTS");
+const  API_PORT = process.env.PORT || 2035;
 
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.use(cors({
-    origin:"*"
-}));
+app.use(cors());
 
 db();
 
