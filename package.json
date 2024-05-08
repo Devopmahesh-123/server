@@ -5,6 +5,7 @@
   "type":"module",
   "main": "index.js",
   "scripts": {
+    "start": " node app.js",
     "server": " set NODE_ENV=default.json && nodemon --exec babel-node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
